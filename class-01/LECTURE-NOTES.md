@@ -222,7 +222,7 @@ Slide deck 1 from Sec+ instructor guide covers the below topics, if you choose t
       - ***Recovery*** - includes backups and restores, AV, server clustering, disaster recovery sites
       - ***Directive*** - deployed to direct, confine, or control the actions of subjects to ensure compliance with security policies
 
-  ![Security Controls](../assets/3-different-types-of-security-controls.png)
+  ![Security Controls](screenshots/3-different-types-of-security-controls.png)
 
   Source: [Purplesec](https://purplesec.us/security-controls/)
 
