@@ -34,7 +34,7 @@ Slide deck 1 from Sec+ instructor guide covers the below topics, if you choose t
 - What is **Information Assurance**?
   - Defined by NIST CSRC: Measures that protect and defend information and information systems by ensuring their availability, integrity, authentication, confidentiality, and non-repudiation. These measures include providing for restoration of information systems by incorporating protection, detection, and reaction capabilities.
   - Draw the **CIA Triad** (InfoSec Institute - CIA Triad)
-    ![CIA Triad](screenshots/2022-12-29-11-21-53.png)
+    ![CIA Triad](2022-12-29-11-21-53.png)
   - Stands for
     - **Confidentiality**
       - ISC2 Definition: Preserving authorized restrictions on information access and disclosure, including means for protecting personal privacy and proprietary information.
@@ -137,7 +137,7 @@ Slide deck 1 from Sec+ instructor guide covers the below topics, if you choose t
         - Continuous Testing
         - Continuous Monitoring
 
-        ![CI/CD Pipeline](screenshots/2022-12-29-13-24-55.png)
+        ![CI/CD Pipeline](2022-12-29-13-24-55.png)
 
     - **DevSecOps**
       - A software development management that brings in security to the DevOps equation
