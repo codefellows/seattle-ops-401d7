@@ -14,29 +14,154 @@ The demo code below introduces concepts necessary to complete the challenge.
 
 You may wish to utilize Python's datetime library for this challenge.
 
+**Notes**
+
+- Datetime module comes built into Python, so you do not need to install anything
+- The module supplies classes to work with date and time
+- `Date` and `datetime` are an object in Python, so when you manipulate them, you are actually manipulating objects and **not** strings or timestamps
+- The `datetime` module is categorized into 6 main classes:
+  - **date**: contains year, month, and date according to the Gregorian calendar
+  - **time**: represents the local time of the day which is independent of any particular day
+  - **datetime**: is a combination of date and time along with the attributes year, month, day, hour, minute, second, microsecond, etc
+  - **timedelta**: A duration expressing the difference between two date, time or datetime instances to microsecond resolution
+  - **tzinfo**: provides time zone information objects
+  - **timezone**: class that implements the tzinfo abstract base class as a fixed offset from the UTC
+
+**Example 1: Date object representing date in Python**
+
 ```python
 #!/usr/bin/env python3
 
-import datetime
+## Python program to demonstrate date class
 
-now = datetime.datetime.now()
-print("Current date and time: ")
-print(str(now))
+# import the date class
+from datetime import date
+
+# Initializing constructor and passing arguments in the format year, month, date
+my_date = date(1996, 12, 11)
+
+print("Date passed as argument is", my_date)
+
+# Uncommenting my_date = date(1996, 12, 39) will raise a ValueError as it is outside range
+
+# Uncommenting my_date = date('1996', 12, 11) will raise a TypeError as a string is passed instead of an integer
+```
+
+**Example 2: Get Current Date**
+
+To return the current local date today() function of date class is used.
+today() function comes with several attributes (year, month and day)
+
+```python
+#!/usr/bin/env python3
+
+# Python program to print current date
+from datetime import date
+
+# Calling the today function of date class
+today = date.today()
+
+print("Today's date is", today)
+```
+
+**Example 3: Get Today's year, month and date**
+
+```python
+#!/usr/bin/env python3
+from datetime import date
+
+# date object of today's date
+today = date.today()
+
+print("Current year:", today.year)
+print("Current month:", today.month)
+print("current day:", today.day)
+```
+
+**Example 4: Get date from Timestamp**
+
+We can create date objects from timestamps y=using the fromtimestamp() method.
+The timestamp is the number of seconds from 1st January 1970 at UTC to a particular date
+
+```python
+from datetime import datetime
+
+# Getting Datetime from timestamp
+date_time = datetime.fromtimestamp(1887639468)
+print("Datetime from timestamp:", date_time)
+```
+
+**Example 5: Convert Date to String**
+
+```python
+from datetime import date
+
+# Calling the today function of date class
+today = date.today()
+
+# Converting the date to the string
+Str = date.isoformat(today)
+print("String Representation", Str)
+print(type(Str))
 ```
 
 ### Python's time library
 
+Python time module allows to work with time in Python. Allows functionality like getting the current time, pausing the program from executing, etc.
 Python also has a time library with a very useful `sleep` function that lets us pause the script execution for the specified amount of time.
+
+**What is epoch?**
+The epoch is the point where time starts and is platform dependent
+On Windows and most Unix systems, the epoch is January 1, 1970, 00:00:00 (UTC) and leap seconds are not counted towards the time in seconds since the epoch
+
+**Example: Getting epoch**
+
+```python
+# To check what the epoch is on a given platform we can use time.gmtime(0)
+import time
+
+print(time.gmtime(0))
+```
+
+**Example: Current time in seconds since epoch**
+
+```python
+import time
+
+curr = time.time()
+print("Current time in seconds since epoch =", curr)
+```
+
+**Example: Getting time string from seconds**
+
+`time.ctime()` function returns a 24 character time string but takes seconds as argument and computes time till mentioned seconds. If no argument is passed, time is calculated until the present
+
+```python
+import time
+
+# Getting current time by passing the number of seconds since epoch
+curr = time.ctime(1627908313.717886)
+print("Current time:", curr)
+```
+
+**Example: Delaying execution time of programs in Python**
+
+Execution can be delayed using `time.sleep()` method. This method is used to halt the program execution for the time specified in the arguments.
 
 ```python
 #!/usr/bin/env python3
 
 import time
 
-print "Start : %s" % time.ctime()
-time.sleep( 5 )
-print "End : %s" % time.ctime()
+for i in range(4):
 
+  # using sleep() to halt execution
+  time.sleep(1)
+  print(i)
+
+print("Start : %s" % time.ctime())
+time.sleep( 5 )
+print("End : %s" % time.ctime())
 ```
 
 ### Creating an infinite loop
@@ -50,9 +175,9 @@ We can use `while True:` to create an unending cycle of commands repeated in per
 import time
 
 while True:
-   print "Start : %s" % time.ctime()
+   print("Start : %s" % time.ctime())
    time.sleep( 5 )
-   print "End : %s" % time.ctime()
+   print("End : %s" % time.ctime())
 
 ```
 
@@ -172,7 +297,7 @@ if __name__ == "__main__":
     print("sending again, waiting with retries via provided send_receive()")
     responses, no_response = multi_ping(addrs, timeout=0.5, retry=2,
                                         ignore_lookup_errors=True)
-    print("    reponses: %s" % list(responses.keys()))
+    print("    responses: %s" % list(responses.keys()))
     if no_responses:
         print("    no response received in time, even after retries: %s" %
               no_response)
