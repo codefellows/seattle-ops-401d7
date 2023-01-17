@@ -47,4 +47,4 @@ Cybersecurity risk analysis is vital in your efforts to identify, protect, and m
 
 - [CyHy Sample Report_508C.pdf](https://www.icloud.com/iclouddrive/0TMsjA7sxPdUxBj1o-rTmwlQQ#CyHy_Sample_Report_508C)
 - [Risk Assessment Worksheet.xlsx](https://www.icloud.com/iclouddrive/0UQGtflOn3XjLgr8cMAMIw7Xw#Risk_Assessment_Worksheet)
-- [Deterministic Risk Analysis](https://www.palisade.com/risk-analysis){:target="_blank"} (disregard the product marketing...)
+- [Deterministic Risk Analysis](https://www.palisade.com/risk-analysis)(disregard the product marketing...)
