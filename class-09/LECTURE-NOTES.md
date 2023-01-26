@@ -95,6 +95,10 @@ Ref. [DEMO.md](DEMO.md)
 
     ![CA](assets/ca.png)
 
+  - Diagram: Email signatures (S/MIME)
+
+    ![Digital Signatures](assets/what-is-smime.jpg)
+
   - **Challenges that a PKI solves**
     - Secures web browsers and communicating networks by SSL/TLS certifications
     - Maintaining Access Rights over Intranets and VPNs
